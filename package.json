@@ -1,0 +1,89 @@
+{
+  "name": "pinda",
+  "version": "0.0.1",
+  "description": "Code for pinda.",
+  "author": "Label A [labela.nl]",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config config/webpack.config.dev.js",
+    "build": "rimraf dist/ && webpack -p --hide-modules --config config/webpack.config.prod.js",
+    "server": "node dist/server.js",
+    "clean": "rimraf dist/",
+    "lint": "eslint --ext .jsx --ext .js src/",
+    "stylelint": "stylelint './src/**/*.js*'",
+    "analyzer": "webpack -p --config config/webpack.config.prod.js --profile --json > stats.json && webpack-bundle-analyzer stats.json ./dist"
+  },
+  "keywords": [],
+  "browserslist": {
+    "production": [
+      "> 0.2%",
+      "ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "5.0.1",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@svgr/webpack": "^4.3.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-styled-components": "^1.10.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-flowtype": "^3.10.3",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "url-loader": "2.0.0",
+    "webpack": "^4.34.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.1",
+    "webpack-merge": "^4.2.1",
+    "workbox-webpack-plugin": "4.3.1"
+  }
+}
