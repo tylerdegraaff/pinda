@@ -1,10 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
+import Chicago from 'fonts/pixChicago.ttf';
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'Chicago';
+    src: url(${Chicago}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html {
     box-sizing: border-box;
     min-height: 100%;
     height: 100%;
+
   }
 
   *,
@@ -17,6 +26,7 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Chicago';
+    font-size: 16px;
   }
 `;

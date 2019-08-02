@@ -99,6 +99,7 @@ const baseConfig = {
       ducks: paths.resolveSrc('ducks'),
       fonts: paths.resolveSrc('static/fonts'),
       images: paths.resolveSrc('static/images'),
+      cursors: paths.resolveSrc('static/cursors'),
       modules: paths.resolveSrc('components/modules'),
       services: paths.resolveSrc('services'),
       styles: paths.resolveSrc('styles'),
